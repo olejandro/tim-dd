@@ -1,0 +1,111 @@
+$ONEMPTY
+$ONEPS
+$ONWARNING
+$SET RUN_NAME 'NO_MITIGATION-CR'
+$SET SCENARIO_NAME 'sys_othernewtechs'
+
+
+SET UNITS_CAP
+/
+'KTA'
+'PJA'
+
+/;
+
+SET UNITS_ACT
+/
+'KT'
+'PJ'
+
+/;
+
+SET COM_GMAP
+/
+'National'.'SCO2DACS_ENVI'.'AGRCO2N'
+'National'.'SCO2DACS_ENVI'.'INDCO2N'
+'National'.'SCO2DACS_ENVI'.'INDCO2P'
+'National'.'SCO2DACS_ENVI'.'PWRCO2N'
+'National'.'SCO2DACS_ENVI'.'RSDCO2'
+'National'.'SCO2DACS_ENVI'.'SRVCO2N'
+'National'.'SCO2DACS_ENVI'.'SUPCO2N'
+
+/;
+
+SET PRC
+/
+'IMPH2G'
+'SCO2DACS'
+
+/;
+
+SET PRC_MAP
+/
+'National'.'IRE'.'IMPH2G'
+'National'.'PRE'.'SCO2DACS'
+
+/;
+
+SET PRC_TSL
+/
+'National'.'IMPH2G'.ANNUAL
+'National'.'SCO2DACS'.ANNUAL
+
+/;
+
+SET PRC_ACTUNT
+/
+'National'.'IMPH2G'.'SUPH2GC'.'PJ'
+'National'.'SCO2DACS'.'SCO2DACS_ENVI'.'KT'
+
+/;
+
+SET TOP
+/
+'National'.'IMPH2G'.'SUPH2GC'.OUT
+'National'.'SCO2DACS'.'AGRCO2N'.IN
+'National'.'SCO2DACS'.'INDCO2N'.IN
+'National'.'SCO2DACS'.'INDCO2P'.IN
+'National'.'SCO2DACS'.'PWRCO2N'.IN
+'National'.'SCO2DACS'.'RSDCO2'.IN
+'National'.'SCO2DACS'.'SRVCO2N'.IN
+'National'.'SCO2DACS'.'SUPCO2N'.IN
+
+/;
+
+SET TOP_IRE
+/
+'IMPEXP'.'SUPH2GC'.'National'.'SUPH2GC'.'IMPH2G'
+
+/;
+
+SET PRC_DESC
+/
+'National'.'IMPH2G' 'Import green H2 gaseous'
+'National'.'SCO2DACS' 'CO2 Backstop process'
+
+/;
+
+PARAMETER
+ACT_COST ' '/
+'National'.2018.'SCO2DACS'.'MEUR2018' 2
+
+/;
+PARAMETER
+IRE_PRICE ' '/
+'National'.2030.'IMPH2G'.'SUPH2GC'.ANNUAL.'National'.IMP.'MEUR2020' 22
+'National'.2050.'IMPH2G'.'SUPH2GC'.ANNUAL.'National'.IMP.'MEUR2020' 12
+
+/;
+PARAMETER
+NCAP_START ' '/
+'National'.'IMPH2G' 2025
+
+/;
+PARAMETER
+PRC_CAPACT ' '/
+'National'.'IMPH2G' 1
+'National'.'SCO2DACS' 1
+
+/;
+
+

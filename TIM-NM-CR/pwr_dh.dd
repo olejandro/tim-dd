@@ -1,0 +1,117 @@
+$ONEMPTY
+$ONEPS
+$ONWARNING
+$SET RUN_NAME 'NO_MITIGATION-CR'
+$SET SCENARIO_NAME 'pwr_dh'
+
+
+SET UNITS_CAP
+/
+'PJA'
+
+/;
+
+SET UNITS_ACT
+/
+'PJ'
+
+/;
+
+SET PRC
+/
+'HET-GRID-EXT_S1'
+'HET-GRID-EXT_S2'
+'HET-GRID-EXT_S3'
+
+/;
+
+SET PRC_MAP
+/
+'National'.'PRE'.'HET-GRID-EXT_S1'
+'National'.'PRE'.'HET-GRID-EXT_S2'
+'National'.'PRE'.'HET-GRID-EXT_S3'
+
+/;
+
+SET PRC_TSL
+/
+'National'.'HET-GRID-EXT_S1'.DAYNITE
+'National'.'HET-GRID-EXT_S2'.DAYNITE
+'National'.'HET-GRID-EXT_S3'.DAYNITE
+
+/;
+
+SET PRC_ACTUNT
+/
+'National'.'HET-GRID-EXT_S1'.'HETD'.'PJ'
+'National'.'HET-GRID-EXT_S2'.'HETD'.'PJ'
+'National'.'HET-GRID-EXT_S3'.'HETD'.'PJ'
+
+/;
+
+SET TOP
+/
+'National'.'HET-GRID-EXT_S1'.'HETC'.IN
+'National'.'HET-GRID-EXT_S1'.'HETD'.OUT
+'National'.'HET-GRID-EXT_S2'.'HETC'.IN
+'National'.'HET-GRID-EXT_S2'.'HETD'.OUT
+'National'.'HET-GRID-EXT_S3'.'HETC'.IN
+'National'.'HET-GRID-EXT_S3'.'HETD'.OUT
+
+/;
+
+SET PRC_DESC
+/
+'National'.'HET-GRID-EXT_S1' 'District Heating Network Extension - S1'
+'National'.'HET-GRID-EXT_S2' 'District Heating Network Extension - S2'
+'National'.'HET-GRID-EXT_S3' 'District Heating Network Extension - S3'
+
+/;
+
+PARAMETER
+ACT_EFF ' '/
+'National'.2020.'HET-GRID-EXT_S1'.'ACT'.ANNUAL 0.8
+'National'.2020.'HET-GRID-EXT_S2'.'ACT'.ANNUAL 0.8
+'National'.2020.'HET-GRID-EXT_S3'.'ACT'.ANNUAL 0.8
+
+/;
+PARAMETER
+CAP_BND ' '/
+'National'.0.'HET-GRID-EXT_S1'.UP 5
+'National'.0.'HET-GRID-EXT_S2'.UP 5
+'National'.0.'HET-GRID-EXT_S3'.UP 5
+'National'.2020.'HET-GRID-EXT_S1'.UP 8.653698919
+'National'.2020.'HET-GRID-EXT_S2'.UP 28.682778717
+'National'.2020.'HET-GRID-EXT_S3'.UP 22.461807872
+
+/;
+PARAMETER
+NCAP_COST ' '/
+'National'.2020.'HET-GRID-EXT_S1'.'MEUR2018' 30.97
+'National'.2020.'HET-GRID-EXT_S2'.'MEUR2018' 55.94
+'National'.2020.'HET-GRID-EXT_S3'.'MEUR2018' 98.38
+
+/;
+PARAMETER
+NCAP_START ' '/
+'National'.'HET-GRID-EXT_S1' 2022
+'National'.'HET-GRID-EXT_S2' 2022
+'National'.'HET-GRID-EXT_S3' 2022
+
+/;
+PARAMETER
+NCAP_TLIFE ' '/
+'National'.2020.'HET-GRID-EXT_S1' 30
+'National'.2020.'HET-GRID-EXT_S2' 30
+'National'.2020.'HET-GRID-EXT_S3' 30
+
+/;
+PARAMETER
+PRC_CAPACT ' '/
+'National'.'HET-GRID-EXT_S1' 1
+'National'.'HET-GRID-EXT_S2' 1
+'National'.'HET-GRID-EXT_S3' 1
+
+/;
+
+

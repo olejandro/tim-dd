@@ -1,0 +1,39 @@
+$ONEMPTY
+$ONEPS
+$ONWARNING
+$SET RUN_NAME 'NO_MITIGATION-CR'
+$SET SCENARIO_NAME 'b_srv_dc_eh'
+
+
+SET COM_GMAP
+/
+'National'.'FT-SRVELC_NRGO'.'SRVELC-DC-C'
+'National'.'IMPNRGZ_NRGO'.'SRVELC-DC-C'
+'National'.'S-DCE-CS_NRGI'.'SRVELC-DC-C'
+
+/;
+
+SET TOP
+/
+'National'.'FT-SRVELC'.'SRVELC-DC-C'.OUT
+'National'.'IMPDEMZ'.'SRVELC-DC-C'.IN
+'National'.'IMPDEMZ'.'SRVHET-DC-LT'.OUT
+'National'.'IMPNRGZ'.'SRVELC-DC-C'.OUT
+'National'.'S-DCE-CS'.'SRVELC-DC-C'.IN
+'National'.'S-DCE-CS'.'SRVHET-DC-LT'.OUT
+
+/;
+
+PARAMETER
+ACT_EFF ' '/
+'National'.2018.'S-DCE-CS'.'ACT'.ANNUAL 1.075
+'National'.2018.'S-DCE-CS'.'SRVELC-DC-C'.ANNUAL 0
+
+/;
+PARAMETER
+IRE_FLO ' '/
+'National'.2018.'IMPDEMZ'.'ABAR'.'IMPEXP'.'ABAR'.ANNUAL 0
+
+/;
+
+
